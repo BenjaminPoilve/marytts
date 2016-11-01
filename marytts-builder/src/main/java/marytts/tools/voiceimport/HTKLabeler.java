@@ -59,10 +59,10 @@ import org.w3c.dom.NodeList;
 
 /**
  * Automatic Labelling using HTK labeller
- * 
+ *
  * @author Sathish Chandra Pammi
  * @author Fabio Tesser
- * 
+ *
  *         Fabio Tesser has fixed some HTK procedures and he has added the managing of virtual pauses (so called short pauses)
  *         after every word. These pauses if detected will notified and it should be check if necessary to force the punctuation
  *         on the original text phrase in order to have a more coherent prosody. Moreover in the initial phase, 1 mixture is used
@@ -177,7 +177,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Do the computations required by this component.
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 * @return true on success, false on failure
@@ -268,7 +268,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Setup the HTK directory
-	 * 
+	 *
 	 * @throws IOException
 	 *             IOException
 	 * @throws InterruptedException
@@ -303,7 +303,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Creating phone dictionary (one-one mapping) and lists
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -351,9 +351,9 @@ public class HTKLabeler extends VoiceImportComponent {
 		// commented G Start Word
 		/*
 		 * phoneListOut.println("GEW"); phoneListOut1.println("GEW"); phoneListOut2.println("GEW");
-		 * 
+		 *
 		 * phoneListOut.println("GSW"); phoneListOut1.println("GSW"); phoneListOut2.println("GSW");
-		 * 
+		 *
 		 * transLabelOut.println("sp"+" "+"GEW"); transLabelOut.println("sp"+" "+"GEW sp");
 		 * transLabelOut.println("sp"+" "+"sp GSW"); transLabelOut.println("sp"+" "+"GSW");
 		 * transLabelOut.println("sp"+" "+"GEW sp GSW");
@@ -371,7 +371,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Create all required files(config files and HMM prototypes) for HTK Training
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -540,7 +540,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * delete sp repetition on htk.phones3.mlf
-	 * 
+	 *
 	 * @param filein
 	 *            filein
 	 * @param fileout
@@ -585,7 +585,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * create phone master label file (Not used?)
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -625,7 +625,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Feature Extraction for HTK Training
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -660,7 +660,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Initialize HTK Training process
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -703,7 +703,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Create HMMs for each phone from Global HMMs
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -758,7 +758,7 @@ public class HTKLabeler extends VoiceImportComponent {
 	// TODO: check why log is empty!
 	/**
 	 * Flat-start initialization for automatic labeling
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -1266,7 +1266,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Force Align database for Automatic labels
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -1415,7 +1415,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Create phone sequence file, which is used for Alignment
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -1456,7 +1456,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Get phone sequence from a single feature file
-	 * 
+	 *
 	 * @param basename
 	 *            basename
 	 * @param spause
@@ -1528,10 +1528,10 @@ public class HTKLabeler extends VoiceImportComponent {
 	}
 
 	/**
-	 * 
+	 *
 	 * This computes a string of phonetic symbols out of an prompt allophones mary xml: - standard phones are taken from "ph"
 	 * attribute
-	 * 
+	 *
 	 * @param tokens
 	 *            tokens
 	 * @return orig
@@ -1599,7 +1599,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Post Processing single Label file and write on OUTLABDIR
-	 * 
+	 *
 	 * @param basename
 	 *            basename
 	 * @throws Exception
@@ -1656,7 +1656,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * To convert HTK Label format to MARY lab format
-	 * 
+	 *
 	 * @throws Exception
 	 *             Exception
 	 */
@@ -1742,7 +1742,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Converting text to RAWMARYXML with Locale
-	 * 
+	 *
 	 * @param locale
 	 *            locale
 	 * @return "&lt;?xml version=\"1.0\" encoding=\"UTF-8\" ?&gt;\n" + "&lt;maryxml version=\"0.4\"\n" +
@@ -1758,7 +1758,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Provide the progress of computation, in percent, or -1 if that feature is not implemented.
-	 * 
+	 *
 	 * @return -1 if not implemented, or an integer between 0 and 100.
 	 */
 	public int getProgress() {
@@ -1767,7 +1767,7 @@ public class HTKLabeler extends VoiceImportComponent {
 
 	/**
 	 * Translation table for labels which are incompatible with HTK or shell filenames See common_routines.pl in HTS training.
-	 * 
+	 *
 	 * @param lab
 	 *            lab
 	 * @return String
@@ -1782,6 +1782,12 @@ public class HTKLabeler extends VoiceImportComponent {
 			s = "ER6";
 		else if (lab.contentEquals("=6"))
 			s = "ER66";
+		else if (lab.contentEquals("@"))
+			s = "FR01";
+		else if (lab.contentEquals("0"))
+			s = "FR02";
+		else if (lab.contentEquals("3"))
+			s = "FR03";
 		else if (lab.contentEquals("2:"))
 			s = "EU22";
 		else if (lab.contentEquals("2"))
@@ -1810,18 +1816,25 @@ public class HTKLabeler extends VoiceImportComponent {
 	 * Translation table for labels which are incompatible with HTK or shell filenames See common_routines.pl in HTS training. In
 	 * this function the phones as used internally in HTSEngine are changed back to the Mary TTS set, this function is necessary
 	 * when correcting the actual durations of AcousticPhonemes.
-	 * 
+	 *
 	 * @param lab
 	 *            lab
 	 * @return String
 	 */
 	public String replaceBackTrickyPhones(String lab) {
+		System.out.println("IM HERE");
 		String s = lab;
 		/** DE (replacements in German phone set) */
 		if (lab.contentEquals("ER6"))
 			s = "6";
 		else if (lab.contentEquals("ER66")) /* CHECK ??? */
 			s = "=6";
+		else if (lab.contentEquals("FR01")) /* PHONEM FR @ */
+			s = "@";
+		else if (lab.contentEquals("FR02")) /* PHONEM FR 0 */
+			s = "0";
+		else if (lab.contentEquals("FR03")) /* PHONEM FR 0 */
+			s = "3";
 		else if (lab.contentEquals("EU2"))
 			s = "2";
 		else if (lab.contentEquals("EU22"))
