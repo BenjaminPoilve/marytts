@@ -1822,7 +1822,6 @@ public class HTKLabeler extends VoiceImportComponent {
 	 * @return String
 	 */
 	public String replaceBackTrickyPhones(String lab) {
-		System.out.println("IM HERE");
 		String s = lab;
 		/** DE (replacements in German phone set) */
 		if (lab.contentEquals("ER6"))
